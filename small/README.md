@@ -229,3 +229,13 @@ He is the co-author of several books, including
 </body>
 </html>
 ```
+
+## Fetch Concurrently
+
+```
+go run fetchall.go http://www.gopl.io https://www.golang.org https://godoc.org
+0.03s    4154 http://www.gopl.io
+0.38s    9951 https://www.golang.org
+0.58s   12642 https://godoc.org
+0.58s elapsed
+```
