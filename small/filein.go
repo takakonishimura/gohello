@@ -18,7 +18,7 @@ func main() {
     for _, filename := range files {
         f, err := os.Open("sample_files/" + filename)
         if err != nil {
-            fmt.Println("bad filename, sample_files/" + filename)
+            fmt.Fprintf(os.Stderr, "opening file failed with error %v\n", err)
             continue
         }
         countLines(f, counts)
